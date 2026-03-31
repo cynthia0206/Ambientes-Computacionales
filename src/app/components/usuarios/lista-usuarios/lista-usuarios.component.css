@@ -1,0 +1,61 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  background-color: #fff0f6; /* rosa muy claro */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Encabezado */
+thead {
+  background-color: #d8b4f8; /* morado pastel */
+  color: #4a2c5a;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #f3d1f4;
+}
+
+/* Hover filas */
+tr:hover {
+  background-color: #fce7f3; /* rosita suave */
+}
+
+/* Botones */
+button {
+  margin-right: 5px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Botón editar */
+button:first-child {
+  background-color: #c4b5fd; /* lila pastel */
+  color: #3b0764;
+}
+
+/* Botón eliminar */
+button:last-child {
+  background-color: #f9a8d4; /* rosa pastel */
+  color: #831843;
+}
+
+/* Botón nuevo usuario */
+button:nth-child(1) {
+  background-color: #fbcfe8;
+  color: #6b21a8;
+  margin-bottom: 10px;
+}
+
+/* Título */
+h2 {
+  color: #6b21a8;
+  margin-bottom: 10px;
+}

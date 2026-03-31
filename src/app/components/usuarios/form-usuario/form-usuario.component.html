@@ -1,0 +1,27 @@
+
+<h3>Formulario Usuario</h3>
+
+<form>
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="usuarioForm.nombre" name="nombre">
+
+  <br>
+
+  <label>Email:</label>
+  <input type="email" [(ngModel)]="usuarioForm.email" name="email">
+
+  <br>
+
+  <label>Rol:</label>
+  <select [(ngModel)]="usuarioForm.rol" name="rol">
+    <option value="admin">Admin</option>
+    <option value="user">User</option>
+    <option value="user">estudiante</option>
+  </select>
+
+
+  <br><br>
+
+  <button type="button" (click)="guardarUsuario()">Guardar</button>
+  <button type="button" (click)="cancelarFormulario()">Cancelar</button>
+</form>

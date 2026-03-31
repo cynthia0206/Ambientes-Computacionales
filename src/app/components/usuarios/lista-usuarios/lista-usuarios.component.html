@@ -1,0 +1,37 @@
+
+<h2>Lista de Usuarios</h2>
+
+<button (click)="abrirFormulario()">Nuevo Usuario</button>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Rol</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>{{ usuario.rol }}</td>
+      <td>
+        <button (click)="abrirFormularioEdicion(usuario)">Editar</button>
+        <button (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Mostrar formulario -->
+<app-form-usuario
+  *ngIf="mostrarFormulario"
+  [usuario]="usuarioSeleccionado"
+  (guardar)="guardarUusuarios($event)"
+  (cancelar)="cancelarEdicion()">
+</app-form-usuario>
